@@ -1,4 +1,3 @@
-
 # DynamicStackView
 
 A lightweight, smarter UIStackView that works in a similar fashion to a UITableView, adding flexibility without complexity. Ideal when you just need to list a couple of views but not requiring the whole package.
@@ -57,6 +56,8 @@ Now add your `DynamicStackViewModel` adhering data models to it:
     let content = Content(text: "My content")
     dynamicStackView.append(model: content)
 
+![Content added](https://github.com/varvet/DynamicStackView/blob/master/ReadMeFiles/screen_1.png)
+
 Or as an array:
 
     let contentArray = [
@@ -65,10 +66,14 @@ Or as an array:
     ]
     dynamicStackView.append(models: contentArray)
 
+![Content added as array](https://github.com/varvet/DynamicStackView/blob/master/ReadMeFiles/screen_2.png)
+
 If you want to manually override the cell type, simply specify it when adding models:
 
     let overriddenContent = Content(text: "Overriden content")
     dynamicStackView.append(model: overriddenContent, cellType: OtherContentCell.self)
+
+![Content added with another cell type](https://github.com/varvet/DynamicStackView/blob/master/ReadMeFiles/screen_3.png)
 
 **Note:** When overriding the cell type, make sure that your subclassed `DynamicStackViewCell` can handle the new `DynamicStackViewModel`:
 
@@ -79,7 +84,13 @@ If you want to manually override the cell type, simply specify it when adding mo
             label.text = model.text
         }
     }
-	
+
+Finally, you can get access to the tapped cell through a callback block:
+
+    dynamicStackView.didTapCell = { cell in
+        print(cell)
+    }
+
 ## Example project
 
 [DynamicStackView/Example](https://github.com/varvet/DynamicStackView/tree/master/DynamicStackView/Example)
