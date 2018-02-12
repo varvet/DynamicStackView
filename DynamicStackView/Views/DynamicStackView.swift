@@ -1,7 +1,7 @@
 import UIKit
 
 /**
- A smarter UIStackView that - not unlike a UITableView - automatically updates with DynamicStackViewCells based on their corresponding DynamicStackViewModel.
+ A lightweight, smarter UIStackView that works in a similar fashion to a UITableView, adding flexibility without complexity. Ideal when you just need to list a couple of views but not requiring the whole package.
  */
 public class DynamicStackView: UIStackView {
 

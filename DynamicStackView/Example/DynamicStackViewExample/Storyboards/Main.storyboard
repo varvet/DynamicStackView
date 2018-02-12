@@ -27,12 +27,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fLG-G5-UZh" secondAttribute="trailing" id="KVt-zX-l2F"/>
                             <constraint firstItem="fLG-G5-UZh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UUe-ol-38x"/>
                             <constraint firstItem="fLG-G5-UZh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="We1-d0-CFR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fLG-G5-UZh" secondAttribute="bottom" id="oFN-5W-k0k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fLG-G5-UZh" secondAttribute="bottom" placeholder="YES" id="oFN-5W-k0k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="stackChatView" destination="fLG-G5-UZh" id="Bcy-Ui-TQ0"/>
+                        <outlet property="dynamicStackView" destination="fLG-G5-UZh" id="rbO-GG-YaM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
