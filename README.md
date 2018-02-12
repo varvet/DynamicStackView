@@ -55,7 +55,7 @@ This is the custom `UIStackView` that manages our cells. Simply add one as an `I
 Now add your `DynamicStackViewModel` adhering data models to it:
 
     let content = Content(text: "My content")
-    stackChatView.append(model: content)
+    dynamicStackView.append(model: content)
 
 Or as an array:
 
@@ -63,12 +63,12 @@ Or as an array:
         Content(text: "My content"),
         Content(text: "More content")
     ]
-    stackChatView.append(models: contentArray)
+    dynamicStackView.append(models: contentArray)
 
 If you want to manually override the cell type, simply specify it when adding models:
 
     let overriddenContent = Content(text: "Overriden content")
-    stackChatView.append(model: overriddenContent, cellType: OtherContentCell.self)
+    dynamicStackView.append(model: overriddenContent, cellType: OtherContentCell.self)
 
 **Note:** When overriding the cell type, make sure that your subclassed `DynamicStackViewCell` can handle the new `DynamicStackViewModel`:
 
