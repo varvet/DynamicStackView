@@ -60,7 +60,7 @@ Now add your `DynamicStackViewModel` adhering data models to it:
 Or as an array:
 
     let contentArray = [
-		Content(text: "My content"),
+	Content(text: "My content"),
         Content(text: "More content")
     ]
     stackChatView.append(models: contentArray)
@@ -78,7 +78,7 @@ If you want to manually override the cell type, simply specify it when adding mo
         } else if let model = model as? OtherContent {
             label.text = model.text
         }
-	}
+    }
 	
 ## Example project
 
