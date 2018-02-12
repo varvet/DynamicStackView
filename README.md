@@ -60,7 +60,7 @@ Now add your `DynamicStackViewModel` adhering data models to it:
 Or as an array:
 
     let contentArray = [
-	Content(text: "My content"),
+        Content(text: "My content"),
         Content(text: "More content")
     ]
     stackChatView.append(models: contentArray)
