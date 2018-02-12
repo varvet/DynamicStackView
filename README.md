@@ -50,7 +50,7 @@ By subclassing `DynamicStackViewCell` you can (**must**) override its setup meth
 
 This is the custom `UIStackView` that manages our cells. Simply add one as an `IBOutlet`:
 
-    @IBOutlet weak var stackChatView: DynamicStackView!
+    @IBOutlet weak var dynamicStackView: DynamicStackView!
     
 Now add your `DynamicStackViewModel` adhering data models to it:
 
