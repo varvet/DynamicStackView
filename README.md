@@ -1,5 +1,6 @@
 
 # DynamicStackView
+
 A lightweight, smarter UIStackView that works in a similar fashion to a UITableView, adding flexibility without complexity. Ideal when you just need to list a couple of views but not requiring the whole package.
 
  1. [Installation](#installation)
@@ -8,7 +9,12 @@ A lightweight, smarter UIStackView that works in a similar fashion to a UITableV
 
 ## Installation
 
-**Carthage**
+#### Supported platforms
+
+- iPhone/iPad
+- Swift 4
+
+#### Carthage
 
     github "varvet/DynamicStackView"
 
