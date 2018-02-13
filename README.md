@@ -27,7 +27,7 @@ Basically there are three parts to DynamicStackView:
 
 #### DynamicStackViewModel - Protocol
 
-All models to be used with `DynamicStackView` has to adhere to this protocol. By doing so, you'll be matching a `DynamicStackViewCell` to automatically generate a view for you:
+All models to be used with `DynamicStackView` has to adhere to this protocol. By doing so, you'll be associating them with a `DynamicStackViewCell` to automatically generate views for you:
 
     extension Content: DynamicStackViewModel {
         var cellType: DynamicStackViewCell.Type {
@@ -37,7 +37,7 @@ All models to be used with `DynamicStackView` has to adhere to this protocol. By
 
 #### DynamicStackViewCell - Superclass
 
-By subclassing `DynamicStackViewCell` you can (**must**) override its setup method to get access to the matching `DynamicStackViewModel`:
+By subclassing `DynamicStackViewCell` you can (**must**) override its setup method to get access to the associated `DynamicStackViewModel`:
 
     override func setup(model: DynamicStackViewModel) {
         if let model = model as? Content {
@@ -51,7 +51,7 @@ This is the custom `UIStackView` that manages our cells. Simply add one as an `I
 
     @IBOutlet weak var dynamicStackView: DynamicStackView!
     
-Now add your `DynamicStackViewModel` adhering data models to it:
+Now add your `DynamicStackViewModel` compatible models to it:
 
     let content = Content(text: "My content")
     dynamicStackView.append(model: content)
@@ -62,7 +62,7 @@ Or as an array:
 
     let contentArray = [
         Content(text: "My content"),
-        Content(text: "More content")
+        Content(text: "Some more content")
     ]
     dynamicStackView.append(models: contentArray)
 
