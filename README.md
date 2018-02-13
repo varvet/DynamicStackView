@@ -70,7 +70,7 @@ Or as an array:
 
 If you want to manually override the cell type, simply specify it when adding models:
 
-    let overriddenContent = Content(text: "Overriden content")
+    let overriddenContent = Content(text: "Overridden content")
     dynamicStackView.append(model: overriddenContent, cellType: OtherContentCell.self)
 
 ![Content added with another cell type](https://github.com/varvet/DynamicStackView/blob/master/ReadMeFiles/screen_3.png)
