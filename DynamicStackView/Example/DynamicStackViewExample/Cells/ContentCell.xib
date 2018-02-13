@@ -29,7 +29,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <color key="backgroundColor" red="0.67021276597764823" green="1" blue="0.48404255316840195" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="bKR-8S-BCH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="6Cq-bS-VgK"/>
                 <constraint firstItem="bKR-8S-BCH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FKm-lL-Ixj"/>

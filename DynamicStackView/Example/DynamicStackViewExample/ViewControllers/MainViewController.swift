@@ -15,12 +15,12 @@ class MainViewController: UIViewController {
         // Append OtherContent models as array.
         let contentArray = [
             Content(text: "My content"),
-            Content(text: "More content")
+            Content(text: "Some more content")
         ]
         dynamicStackView.append(models: contentArray)
 
         // Append Content model, but with another cell type. This requires the setup method in OtherContentCell to be able to handle it.
-        let overriddenContent = Content(text: "Overriden content")
+        let overriddenContent = Content(text: "Overridden content")
         dynamicStackView.append(model: overriddenContent, cellType: OtherContentCell.self)
 
         // Check taps.
