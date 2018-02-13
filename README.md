@@ -23,7 +23,7 @@ Basically there are three parts to DynamicStackView:
 
  1. [DynamicStackViewModel](#dynamicstackviewmodel---protocol)
  2. [DynamicStackViewCell](#dynamicstackviewcell---superclass)
- 3. [DynamicStackView](#dynamicstackview---view)
+ 3. [DynamicStackView](#dynamicstackview---container)
 
 #### DynamicStackViewModel - Protocol
 
@@ -45,7 +45,7 @@ By subclassing `DynamicStackViewCell` you can (**must**) override its setup meth
         }
     }
 
-#### DynamicStackView - View
+#### DynamicStackView - Container
 
 This is the custom `UIStackView` that manages our cells. Simply add one as an `IBOutlet`:
 
