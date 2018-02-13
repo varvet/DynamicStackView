@@ -84,8 +84,7 @@ public extension DynamicStackView {
 
     private func createCell(from model: DynamicStackViewModel, cellType: DynamicStackViewCell.Type? = nil) -> DynamicStackViewCell {
         let cell = (cellType != nil) ? cellType!.init() : model.cellType.init()
-        cell.setup(handleTap: handleTap, tapCallback: { self.didTapCell?(cell) })
-        cell.setup(model: model)
+        cell.setup(model: model, handleTap: handleTap, tapCallback: { self.didTapCell?(cell) })
 
         return cell
     }
@@ -112,21 +111,14 @@ public extension DynamicStackView {
             if indexes.contains(i) { cellsToRemove.append(cells[i]) }
         }
 
-        cellsToRemove.forEach { self.remove(cell: $0) }
+        cellsToRemove.forEach { $0.removeFromSuperview() }
     }
 
     /**
      Removes all cells.
      */
     public func removeAll() {
-        cells.forEach { cell in
-            self.remove(cell: cell)
-        }
-    }
-
-    private func remove(cell: DynamicStackViewCell) {
-        removeArrangedSubview(cell)
-        cell.removeFromSuperview()
+        cells.forEach { $0.removeFromSuperview() }
     }
 }
 

@@ -19,11 +19,12 @@ open class DynamicStackViewCell: XibView {
         fatalError("DynamicStackView: Must implement setup(model: DynamicStackViewModel) in each DynamicStackViewCell.")
     }
 
-    func setup(handleTap: Bool, tapCallback: Callback? = nil) {
-        self.tapCallback = tapCallback
+    func setup(model: DynamicStackViewModel, handleTap: Bool, tapCallback: Callback? = nil) {
         self.handleTap = handleTap
-
+        self.tapCallback = tapCallback
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
+
+        setup(model: model)
     }
 
     @objc private func handleTap(_ sender: UITapGestureRecognizer) {
